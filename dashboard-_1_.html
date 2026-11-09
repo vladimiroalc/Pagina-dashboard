@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f1f5f9; }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar {
+      width: 220px;
+      background: #1e293b;
+      color: white;
+      padding: 1.5rem 1rem;
+    }
+    .sidebar h2 { margin-bottom: 1.5rem; }
+    .sidebar nav { display: flex; flex-direction: column; gap: 0.5rem; }
+    .sidebar a {
+      color: #cbd5e1;
+      text-decoration: none;
+      padding: 0.5rem;
+      border-radius: 4px;
+    }
+    .sidebar a:hover, .sidebar a.activo {
+      background: #334155;
+      color: white;
+    }
+    .contenido { flex: 1; padding: 2rem; }
+    .contenido h1 { margin-bottom: 1.5rem; color: #1e293b; }
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .tarjeta {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .tarjeta h3 { font-size: 0.9rem; color: #64748b; margin-bottom: 0.5rem; }
+    .numero { font-size: 1.8rem; font-weight: bold; color: #0f172a; }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Admin</h2>
+      <nav>
+        <a href="#" class="activo">📊 Resumen</a>
+        <a href="#">📦 Pedidos</a>
+        <a href="#">👥 Usuarios</a>
+        <a href="#">⚙️ Ajustes</a>
+      </nav>
+    </aside>
+
+    <main class="contenido">
+      <h1>Bienvenido, <!-- nombre dinámico -->Ana</h1>
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <h3>Pedidos hoy</h3>
+          <p class="numero"><!-- dato dinámico -->24</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Ingresos</h3>
+          <p class="numero"><!-- dato dinámico -->$1,240</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Usuarios nuevos</h3>
+          <p class="numero"><!-- dato dinámico -->7</p>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
